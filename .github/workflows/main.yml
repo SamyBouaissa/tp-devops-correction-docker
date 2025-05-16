@@ -26,11 +26,8 @@ jobs:
 
       - name: SonarCloud analysis
         working-directory: simple-api
-        run: mvn -B verify sonar:sonar \
-          -Dsonar.projectKey=SamyBouaissa_tp-devops-correction-docker \
-          -Dsonar.organization=SamyBouaissa \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=SamyBouaissa_tp-devops-correction-docker -Dsonar.organization=SamyBouaissa -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
 
   build-and-push-docker-image:
     needs: test-backend
