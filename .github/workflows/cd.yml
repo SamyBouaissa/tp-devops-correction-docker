@@ -36,7 +36,6 @@ jobs:
           sed -i "s/<version>$CURRENT_VERSION<\/version>/<version>$NEW_VERSION<\/version>/" $FILE
 
           echo "IMAGE_TAG=$NEW_VERSION" >> $GITHUB_ENV
-
       - name: Login to DockerHub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
