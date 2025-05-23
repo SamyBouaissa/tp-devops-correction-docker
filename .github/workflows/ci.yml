@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - develop
+      - test-cd-branch
   pull_request:
 
 jobs:
