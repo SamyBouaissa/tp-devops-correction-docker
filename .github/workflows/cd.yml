@@ -25,7 +25,6 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-simple-api:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-simple-api:${{ github.run_number }}
           push: true
-
       - name: Build and push database
         uses: docker/build-push-action@v6
         with:
